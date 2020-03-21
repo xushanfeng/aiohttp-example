@@ -1,0 +1,10 @@
+mysql:
+  user: root
+  password: Aa123456
+  host: localhost
+  port: 3306
+  database: aiohttp_example
+  init_connector: mysqlconnector
+
+base:
+  port: 8082
