@@ -15,5 +15,5 @@ async def save_student(request):
 
 
 async def student(request):
-    st_id = request.match_info.get("id")
+    st_id = request.rel_url.query.get("id")
     return await asyncio.shield(student_svc.single_student(st_id))
