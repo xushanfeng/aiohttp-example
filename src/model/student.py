@@ -26,7 +26,7 @@ async def insert_student(student_obj):
     sql = student_tb.insert().values(
         name=student_obj.get("name"),
         st_class=student_obj.get("st_class"),
-        status=1 if not student_obj.get("status") else student_obj.get("status"),
+        status=student_obj.get("status", 1),
         create_time=current_sec_time(),
         update_time=current_sec_time())
     return await insert_or_update(sql)
